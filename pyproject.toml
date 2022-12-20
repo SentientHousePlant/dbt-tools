@@ -1,8 +1,8 @@
 [tool.poetry]
-name = "dbtest"
+name = "python-boilerplate"
 version = "0.1.0"
-description = "Testing for dbt."
-authors = ["Indi Harrington <hi@indigo.rocks>"]
+description = "A modern python boilerplate."
+authors = ["Your Name <you@example.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.10"
