@@ -1,11 +1,21 @@
 [tool.poetry]
-name = "python-boilerplate"
-version = "0.1.0"
-description = "A modern python boilerplate."
-authors = ["Your Name <you@example.com>"]
+name = "dbt-tools"
+version = "0.1.1"
+description = "Tools for dbt."
+authors = ["Indi Harrington <hi@indigoharrington.com>"]
+packages = [
+    { include = "dbttools" },
+]
+
 
 [tool.poetry.dependencies]
 python = "^3.10"
+invoke = "^1.7.3"
+gitpython = "^3.1.29"
+dbt-core = "^1.3.1"
+networkx = "^2.8.8"
+pyvis = "^0.3.1"
+rich = "^12.6.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^7.1.2"
@@ -16,3 +26,6 @@ coverage = "^6.4.1"
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+dbt-test = "dbttools.main:program.run"
